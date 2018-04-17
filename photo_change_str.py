@@ -58,3 +58,6 @@ if __name__=='__main__':  #如果是本程序调用，则执行以下程序
 	else:
 		with open(" %s.txt"%num,'w')as f :
 			f.write(txt,i)
+	
+     #通过自定义output的文件名，确保了多次转换的时候原来的字符画不被覆盖
+     #通过自定义宽，高实现不同图片的美观性 
