@@ -1,0 +1,15 @@
+#在n个数中随机取m个数
+
+import random
+n=int(input())
+m=int(input()) #定义nm的输入
+def ball(n,m):  #判断nm的合理输入情况
+   if m>n:
+      print('error')
+   else:
+      ball=random.sample(range(1,n+1),m)  #random.sample从序列中随机取出一些数
+      ball.sort()                         #对序列进行排序
+      print(ball)
+
+
+ball(n,m)      #使用ball函数

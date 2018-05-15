@@ -1,0 +1,14 @@
+#找出指定文件夹中的所有以txt结尾的文件，包括所有嵌套的子文件夹
+#解决这个问题最好的办法就是用os模块中的walk方法，可以遍历一个文件夹下的所有文件包括嵌套的子文件夹
+
+import os
+import fnmatch
+
+def findfile(inputdir):
+    txtlist=[]
+    for parent,dirnames,filename in os.walk(inputdir):
+        print(filename)
+        for filenames in filename:
+            txtlist.append(filenames)
+    return fnmatch.filter(txtlist,'*.txt') #匹配符合规定的文件名
+

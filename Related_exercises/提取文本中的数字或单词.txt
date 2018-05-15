@@ -1,0 +1,20 @@
+import re  #载入正则表达式
+fi=open('scores.txt')
+data=fi.read()
+fi.close()
+# 打开文件读入文件
+
+result=re.findall('[0-9]+',data)
+# 用正则表达式中的findall方法
+# 找出data中所有的数字字符
+
+result.sort()
+# 把得到的结果字符串list排序，默认为字典序
+
+data='\n'.join(result)
+# 把排序后的结果用换行符连接成一段文本
+
+f2=open('to.txt','w')
+f2.write(data)
+f2.close()
+# 输出到文件中

@@ -1,0 +1,5 @@
+import re
+text = "aAsmr3idd4bgs7Dlsf9eAF"
+result=re.findall('[0-9]+',text) #遍历整个序列找出所有数字
+result.sort()          #排序
+print(result)

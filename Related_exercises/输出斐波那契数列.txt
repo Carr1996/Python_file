@@ -1,0 +1,8 @@
+i=1
+j=1
+x=1
+n=int(input())
+while x<=n:
+   print(i)
+   i,j=j,i+j
+   x+=1

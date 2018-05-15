@@ -1,0 +1,8 @@
+import random
+list=[]
+for i in range(1,21): #从1-15中随机抽取20个随机数
+    num=random.randint(1,15)
+    list=list+[num]
+print(list)            #输出最终包含20个随机数的列表
+result=sorted(set(list))   #去除重复并按顺序排序
+print(result)          #输出最终列表

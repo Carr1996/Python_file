@@ -1,0 +1,6 @@
+for i in range(1,201):
+    sqr=i*i
+    str_sqr=str(sqr) #把sqr化为字符串
+    istr_sqr=str_sqr[::-1]#把字符串逆排序，冒号分割的第三个值表示步长，步长-1表示倒着把每个值读出来
+    if str_sqr==istr_sqr:
+        print(i)
